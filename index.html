@@ -5,100 +5,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="favicon" type="image/x-icon" href="logo.png">
+    <title>The Webathon</title>
+    <link rel="icon" type="image/x-icon" href="./bat.png">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Raleway', sans-serif;
         }
 
         body {
-            background-repeat: no-repeat;
+            background: linear-gradient(45deg, rgba(255, 27, 255, 0.685), rgba(49, 255, 255, 0.774));
+            min-height: 100vh;
+            height: 105vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: space-between;
-            /* background-size:contain;
-            background-image: url("two.jpg"); */
-            background: linear-gradient(45deg,rgba(255, 27, 255, 0.685),rgba(49, 255, 255, 0.774));
-            width: 100vw;
-            height: 100vh;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
         }
-  
 
-        .my-button {
+        .main-wrapper {
+            font-size: 22px;
             position: absolute;
-            top: 46%;
-            left: 70%;
-            /* background: linear-gradient(to right, #00fff5, #6a00ff); */
-            background-color: #2D2D2D;;
-            color: #fff;
-            font-family:roboto slab;
-            font-size: 20px;
-            font-weight: 800;
-            font-style: normal;
-            text-decoration: none;
-            padding: 14px 15px;
-            border: 0px solid #000;
-            border-radius: 40px;
-            display: inline-block;
-            box-shadow: 13px 8px 27px -8px #2D2D2D;
+            left: 25%;
+            top: 35%;
+            width: 50vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .my-button:hover {
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            width: fit-content;
+            background-color: #2D2D2D;
+            padding: 15px;
+            border-radius: 50px;
+        }
+
+        a:hover {
+            transition: 1s;
             color: black;
             background-color: white;
         }
 
-        .my-button:active {
-            transform: scale(0.95);
+        a:hover::after {
+            content: "🚀";
         }
 
-        .head{
-            display: flex;
-            position: absolute;
-            top:45%;
-            left: 25%;
-            font-size: 60px ;
-        }
-
-        .footer{
-            position: absolute;
-            color: #fff;
-            height: 100px;
-            padding: 20px;
+        .footer {
+            font-size: 12px;
+            width: 100vw;
+            padding: 10px 5px;
             background-color: #2D2D2D;
-            min-width: 99.8vw;
+            color: white;
             display: flex;
-            justify-content: space-evenly;
+            flex-direction: row;
+            justify-content: space-around;
             align-items: center;
-            bottom: 0px;
         }
-        .logo{
+
+        .foot {
+            /* margin: 5px; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .foot>* {
+            margin: 0px 5px;
+        }
+
+        .logo {
             width: 75px;
             border-radius: 50px;
         }
 
+        @media only screen and (max-width : 600px) {
+            .footer {
+                flex-direction: column;
+            }
+
+            .main-wrapper {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <h1 class="head">Welcome, to The Webathon</h1>
-        <a href="https://p.hck.re/pmwn" target="_blank" class="my-button">Click Here</a>
+
+        <div class="main-wrapper">
+            <h1 class="head">Welcome, to The Webathon</h1>
+            <a href="https://p.hck.re/pmwn" target="_blank" class="my-button">Click Here</a>
+        </div>
+
     </div>
 
     <div class="footer">
-        <img alt="RVRJC College" src="logo.jpg" class="logo">
-        <h2>RVR&JC College Of Engineering CSE</h2>
-        <img src="Iste.png" class="logo">
-        <h2>Indian Society for Technical Education</h2>
+
+        <div class="foot">
+            <img alt="RVRJC College" src="logo.jpg" class="logo">
+            <h2>RVR&JC College Of Engineering CSE</h2>
+        </div>
+        <div class="foot">
+            <img src="Iste.png" class="logo">
+            <h2>Indian Society for Technical Education</h2>
+        </div>
+
     </div>
 </body>
 
